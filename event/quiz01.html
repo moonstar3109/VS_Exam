@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>사진사진사진사진</h2>
+    <div class="list">
+        <img src="img/1.jpg" width="100px">
+        <img src="img/2.jpg" width="100px">
+        <img src="img/3.jpg" width="100px">
+        <img src="img/4.jpg" width="100px">
+
+    </div>
+    결과:
+    <div >
+        <img src="img/1.jpg" width="300px" class="result" >
+    </div>
+
+    <script>
+        var list = document.querySelector(".list");
+        var result = document.querySelector(".result");
+        list.addEventListener("click",change);
+        function change() {
+            if(event.target.tagName !== 'IMG')return;
+            console.log(event.target.src)
+            result.src = event.target.src;
+            
+        }
+
+    </script>
+
+</body>
+</html>
